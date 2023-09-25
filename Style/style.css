@@ -1,0 +1,75 @@
+body {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#bookFormContainer, #bookshelfContainer {
+    width: 45%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px 12px;
+    text-align: left;
+}
+body {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#bookFormContainer, #bookshelfContainer {
+    width: 45%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px 12px;
+    text-align: left;
+}
+
+/* Стилі для інпутів та кнопки */
+input[type="text"], input[type="number"], input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Закруглені краї */
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50; /* Зелений колір для кнопки */
+    color: white; /* Білий текст */
+    cursor: pointer; /* Вказівник руки при наведенні */
+    transition: background-color 0.3s; /* Плавний перехід колірного фону */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Темніший відтінок зеленого при наведенні */
+}
+
+input[type="checkbox"] {
+    margin-right: 10px; /* Відступ справа для чекбокса */
+}
