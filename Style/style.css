@@ -11,6 +11,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     padding: 20px;
     margin: 10px; 
+    font-family: Alef;
 }
 
 table {
@@ -18,9 +19,7 @@ table {
     border-collapse: collapse;
 }
 
-table, th, td {
-    border: 1px solid black;
-}
+
 
 th, td {
     padding: 8px 12px;
@@ -31,7 +30,7 @@ input[type="text"], input[type="number"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #0168FC; /* Синій колір обводки */
+    border: 1px solid #0168FC; 
     border-radius: 4px;
 }
 
@@ -60,4 +59,20 @@ label {
     display: inline-block; 
     margin-right: 10px; 
     margin-bottom: 5px;
+}
+button.deleteButton {
+    width: 35%; 
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #0168FC; 
+    border-radius: 4px;
+    background-color: #0168FC;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+
+button.deleteButton:hover {
+    border-radius: 1000px;
+    background:  #3c587f;
 }

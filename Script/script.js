@@ -1,5 +1,3 @@
-
-
 function concatenateString(text, maxLength) {
     if (text.length > maxLength) {
         return text.slice(0, maxLength).toUpperCase() + '...';
@@ -62,17 +60,43 @@ class Bookshelf {
 }
 
 function displayBooks(bookshelf) {
-    const tableBody = document.querySelector('table tbody');
-    tableBody.innerHTML = ''; // Очищаємо таблицю
+    const container = document.getElementById('bookshelfContainer');
+    
+    
+    const newTable = document.createElement('table');
+    container.appendChild(newTable);
 
-    bookshelf.books.forEach(book => {
-        const row = tableBody.insertRow();
-        row.insertCell().innerText = book.title;
-        row.insertCell().innerText = book.authors;
-        row.insertCell().innerText = book.numberOfPages;
-        row.insertCell().innerText = book.isRead ? 'Yes' : 'No';
-        row.insertCell().innerText = book.isFavorite ? 'Yes' : 'No';
-    });
+    const book = bookshelf.books[bookshelf.books.length - 1]; 
+
+    const titleRow = newTable.insertRow();
+    titleRow.insertCell().innerText = "Title";
+    titleRow.insertCell().innerText = book.title;
+
+    const authorsRow = newTable.insertRow();
+    authorsRow.insertCell().innerText = "Authors";
+    authorsRow.insertCell().innerText = book.authors;
+
+    const pagesRow = newTable.insertRow();
+    pagesRow.insertCell().innerText = "Number of Pages";
+    pagesRow.insertCell().innerText = book.numberOfPages;
+
+    const readRow = newTable.insertRow();
+    readRow.insertCell().innerText = "Is Read";
+    readRow.insertCell().innerText = book.isRead ? 'Yes' : 'No';
+
+    const favRow = newTable.insertRow();
+    favRow.insertCell().innerText = "Is Favorite";
+    favRow.insertCell().innerText = book.isFavorite ? 'Yes' : 'No';
+
+    
+    const deleteButton = document.createElement('button');
+    deleteButton.innerText = "Delete this table";
+    deleteButton.className = "deleteButton"; 
+    deleteButton.onclick = function() {
+        container.removeChild(newTable);
+        container.removeChild(deleteButton);
+    };
+    container.appendChild(deleteButton);
 }
 
 const bookshelf = new Bookshelf();
@@ -91,4 +115,3 @@ document.getElementById('bookForm').addEventListener('submit', function(event) {
     displayBooks(bookshelf);
     document.getElementById('bookForm').reset();
 });
-
