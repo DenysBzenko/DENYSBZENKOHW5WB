@@ -2,37 +2,15 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    font-family: Arial, sans-serif;
+    align-items: flex-start; 
 }
 
 #bookFormContainer, #bookshelfContainer {
     width: 45%; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     padding: 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid black;
-}
-
-th, td {
-    padding: 8px 12px;
-    text-align: left;
-}
-body {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-#bookFormContainer, #bookshelfContainer {
-    width: 45%; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
-    padding: 20px;
+    margin: 10px; 
 }
 
 table {
@@ -49,27 +27,37 @@ th, td {
     text-align: left;
 }
 
-/* Стилі для інпутів та кнопки */
-input[type="text"], input[type="number"], input[type="submit"] {
+input[type="text"], input[type="number"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px; /* Закруглені краї */
-    box-sizing: border-box;
+    border: 1px solid #0168FC; /* Синій колір обводки */
+    border-radius: 4px;
 }
 
 input[type="submit"] {
-    background-color: #4CAF50; /* Зелений колір для кнопки */
-    color: white; /* Білий текст */
-    cursor: pointer; /* Вказівник руки при наведенні */
-    transition: background-color 0.3s; /* Плавний перехід колірного фону */
+    width: 35%; 
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #0168FC; 
+    border-radius: 4px;
+    background-color: #0168FC;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, border-radius 0.3s;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049; /* Темніший відтінок зеленого при наведенні */
+    border-radius: 1000px;
+    background:  #3c587f;
 }
 
 input[type="checkbox"] {
-    margin-right: 10px; /* Відступ справа для чекбокса */
+    margin-right: 10px;
+}
+
+label {
+    display: inline-block; 
+    margin-right: 10px; 
+    margin-bottom: 5px;
 }
